@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Metaverse Room</title>
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1a5f2348ffe8647e65e0c14788f5ae2bf27ed0cc/dist/aframe-master.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    <script src="js/move.js"></script>
+</head>
+
+<body>
+    <!-- 3D scene START -->
+    <a-scene fog="type: linear; color: #AAA" background="color: #181616" cursor="rayOrigin: mouse" renderer="antialias: true; colorManagement: true; sortObjects: true; physicallyCorrectLights: true; maxCanvasWidth: 1920; maxCanvasHeight: 1920;">
+
+    <!-- navMesh asset loader START -->
+    <a-asset-item id="CircleNavMesh" src="navmesh/navmeshcircle.gltf"></a-asset-item>
+    <!-- navMesh asset loader END -->
+
+
+    <!-- 2D asset loader START -->
+    <a-asset-item id="larry" src="assets/2DAssets/larry.png"></a-asset-item>
+    <!-- 2D asset loader END -->
+ß
+    <!-- 3D asset loader START -->
+    <a-asset-item id="TronFloor" src="assets/3DModels/floor.gltf"></a-asset-item>
+    <a-asset-item id="logo" src="assets/3DModels/oLogo.gltf"></a-asset-item>
+    <!-- 3D asset loader END -->
+
+    <!-- 3D asset scene placement START -->
+    <a-entity id="3dFloor" gltf-model="#TronFloor" rotation="0 0 0" position="0 0.1 0" scale="0.1 0.1 0.1" ></a-entity>
+    <a-entity id="ologo" gltf-model="#logo" rotation="90 0 0" position="0 10 0" scale="1 1 1" animation="property: rotation;from : 90 90 0; to: 90 450 0; loop: true;easing: linear; dur: 100000"></a-entity>
+    <a-entity id="aaa" gltf-model="#larry" rotation="90 0 0" position="0 1 0" scale="1 1 1" animation="property: rotation;from : 90 90 0; to: 90 450 0; loop: true;easing: linear; dur: 100000"></a-entity>
+
+    <!-- 3D asset scene placement END -->
+    
+    <!-- <a-box material="src:#larry" position="5 5 0" rotation="0 270 0"></a-box> -->
+
+    <!-- primitives placement START -->
+    <!-- <a-entity id="cta" postion="0 1.5 0" animation="property: rotation;from : 0 0 0; to: 0 360 0; loop: true;easing: linear; dur: 100000">
+        <a-plane material="shader: flat; src: #larry" height="2" width="3" position="-1.5 1.5 0" rotation="0 270 0"></a-plane>
+        <a-plane material="shader: flat; src: #larry" height="2" width="3" position="0 1.5 -1.5" rotation="0 180 0"></a-plane>
+        <a-plane material="shader: flat; src: #larry" height="2" width="3" position="0 1.5 1.5" rotation="0 0 0"></a-plane>
+        <a-plane material="shader: flat; src: #larry" height="2" width="3" position="1.5 1.5 0" rotation="0 90 0"></a-plane>
+    </a-entity> -->
+    <!-- primitives placement END -->
+    
+    <!-- navMes placement START-->
+      <a-entity gltf-model="#CircleNavMesh" position="0 -0.01 0" scale="60 1 60" visible="false" nav-mesh></a-entity>
+    <!-- navMes placement END-->
+
+    <!-- navMes cameraRig placement START-->
+    <a-entity id="cameraRig" position="-6.8 0 0" rotation="0 -90 0" movement-controls="constrainToNavMesh: true" >
+    
+    <!-- camera START-->
+    <a-entity camera id="camera" look-controls position="0 1.6 0"></a-entity>
+    <!-- camera END-->
+    </a-entity> 
+    <!-- navMes cameraRig placement END-->
+    </a-scene>
+    <!-- 3D scene END -->
+
+</body>
+
+</html>
