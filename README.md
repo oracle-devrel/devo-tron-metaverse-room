@@ -1,28 +1,36 @@
-# TRON - metaverse room
+40th Anniversary Tron Day - Metaverse Room on OCI
 
 [![License: UPL](https://img.shields.io/badge/license-UPL-green)](https://img.shields.io/badge/license-UPL-green) [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=oracle-devrel_devo-tron-metaverse-room)](https://sonarcloud.io/dashboard?id=oracle-devrel_devo-tron-metaverse-room)
 
 ## Introduction
-40 years ago the most iconic movie (IMHO it is a bit underated maybe because not a great sequel) was released. We put together this repo for you to learn how to create your own cyber metaverse grid room.
+40 years ago one of the most iconic movie called Tron was released. 
+To celebrate that I created a repository to teach you how you can run your own metaverse rooms and host them on Oracle Cloud Infrastructure.
+
+## SWAG ALERT 
+[Join our Slack Community](https://oracledevrel.slack.com/shared_invite/zt-1529xwkyv-YXfNmLHdB3z8w642ODXGzw#/shared-invite/email)<br>
+Post your designs in our slack channel for a chance to win in our swag raffle!
 
 ## Getting Started
+Check out this open source frame work called aframe.io. It is very neat and gives you options to do pretty advanced stuff  - especially if you are good with Blender and 3D.<br>
+Here is my example  demo of how you can modify itAll you need is a web-server but don't worry we will show you how to set one up on Oracle Cloud Infrastructure… did I mention it is free?
+Note that you can run multiple rooms on one compute instance!
 
 ### Create your free tier instance
-YAS! Thanks to aframe.io you can run metaverse...for free. All you need is to create your account here https://www.oracle.com/uk/cloud/free/
+You can create your free tier account [here](https://www.oracle.com/uk/cloud/free/)  -  there is also a great tutorial done by [Chris Bensen](https://medium.com/oracledevs/create-an-oracle-always-free-cloud-account-bc6aa82c1397) on how to get one.<br>
+You can use A1 or E2.1 shape - this tutorial will focus on Linux OS but you can use other distributions (just bear in mind that CLI commands will be different)
 
 ### Connect to your instance
-Using remote connection of your choice connect to your OCI instance. Here is a link on how to get started with OCI https://docs.oracle.com/en-us/iaas/Content/GSG/Reference/overviewworkflow.htm
+Using remote connection of your choice connect to your OCI instance. Here is a link on how to get [started with OCI](https://docs.oracle.com/en-us/iaas/Content/GSG/Reference/overviewworkflow.htm)
 
-For this tutorial all we need is following compute instance:
-- OCPU : 1 
-- RAM : 2Go
-- Storage : 50Go 
-- Arch: AMD64 
-- OS : Oracle Linux 8
+Make sure you save or upload your SSH key as we will need to connect to your instance later
+To connect to your instance via SSH with key use following command in your terminal of choice - I use VS studio
+```
+ssh -i </path/to/your/private/key/> <username>@<public IP of your instance>
+```
 
-### Nginx Webserver setup
-
-Check for packages updates before installing Nginx packages  
+### NGINX Webserver setup
+NGINX - is a great open source software that handles web servicing and it consit of many other capabilities. We will be using it as a web server.
+Check for packages updates before installing NGINX packages
 ```
 sudo dnf update && sudo dnf upgrade
 ```
@@ -104,9 +112,10 @@ Use a browser and connect to `http://example.com`. The web server shows the exam
 
 Use a browser and connect to `IP_address_of_the_server`. The web server shows the example content from the `/usr/share/nginx/html/index.html` file.  
 
-### Adding TLS to our Nginx server  
+### (optional) Adding TLS to our Nginx server  
 
-In order to add HTTPS capabilities to our server. We’re going to use Let’s Encrypt Certbot to make things easier.
+If you want to add VR view to your room we will need to add HTTPS capabilities to our server. 
+I recommend using Let's Encrypt Certbot to make renewal process much easier.
 
 For starters, we need to enable EPEL Repository (assuming you never did it before).  
 ```
@@ -150,7 +159,7 @@ Let’s remove the dummy file in the /var/www/example.com/ folder.
 cd /var/www/example.com/ && sudo rm index.html
 ```
 
-Clone the our metaverse room from Github (make sure to keep the "." as we want to have the content of the repo in our folder).
+Clone the our metaverse room from Github (make sure to keep the "." as we want to have the content of the repo in your Cloud compute folder).
 ```
 sudo git clone https://github.com/oracle-devrel/devo-tron-metaverse-room.git .
 ```
@@ -158,22 +167,17 @@ sudo git clone https://github.com/oracle-devrel/devo-tron-metaverse-room.git .
 Use a browser and connect to https://example.com to see your 3DPR loaded!
 
 ### Prerequisites
-This guide assumes you already have a compute instance provisioned on your tenant and have a domain redirected to your instance. 
+- some knowledge of Cloud and running commands in terminal
+- determination
+- spare time
 
-Replace example.com with your domain in this guide!
 
-VPS Configuration for this tutorial :
-- OCPU : 1 
-- RAM : 2Go
-- Storage : 50Go 
-- Arch: AMD64 
-- OS : Oracle Linux 8
+…and that is it… your metaverse room is up and running.<br>
 
-## Notes/Issues
-You can run multiple rooms on one FREE ACCOUNT!
-
-## URLs
-* Nothing at this time
+## Notes
+At Oracle we embrace open source technologies! Our aframe.io code is pretty basic so feel free to improve it! <br>You can find inspiration here [aframe.io examples](https://aframe.io/aframe/examples/)<br>
+Another good place to look at is Blender - it's free and very powerful. Perfect if you looking to start your 3D journey. IMHO Blender is absolutely amazing piece of kit and with new 3.2 release, there is a ton of new features make sure to check them out https://www.blender.org/download/releases/3-2/<br>
+Another place to check out is this blog done by Mozilla Hubs on how to export glTF files from Blender and import them into webGL experiences. glTF is being considered as an jpeg of 3D and it is royalty free - you can learn more about it here https://www.khronos.org/gltf/
 
 ## Contributing
 This project is open source.  Please submit your contributions by forking this repository and submitting a pull request!  Oracle appreciates any contributions that are made by the open source community.

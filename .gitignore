@@ -31,3 +31,12 @@ Temporary Items
 .crt
 .csr
 .pem
+Deploy/.terraform.lock.hcl
+Deploy/.terraform.lock.hcl.info
+Deploy/.terraform/
+Deploy/key/
+Deploy/terraform.tfstate.backup
+Deploy/terraform.tfstate
+Deploy/terraform.tfvars
+
+Deploy/
