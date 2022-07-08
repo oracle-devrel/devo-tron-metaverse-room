@@ -2,13 +2,16 @@
 <html lang="en">
     <head>
     <title>Metaverse Room</title>
+        <!-- calling external libraries START -->
     <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1a5f2348ffe8647e65e0c14788f5ae2bf27ed0cc/dist/aframe-master.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <link href="./css/style.css" rel="stylesheet">
-
+        <!-- calling external libraries END -->
 
 <body>
+    <!-- entry button and bg music interaction START -->
     <div id="loadingScreen"><button class="button">Enter</button></div>
+    <!-- entry button and bg music interaction END -->
 
     <!-- 3D scene START -->
     <a-scene fog="type: linear; color: #AAA" background="color: #181616" cursor="rayOrigin: mouse" renderer="antialias: true; colorManagement: true; sortObjects: true; physicallyCorrectLights: true; maxCanvasWidth: 1920; maxCanvasHeight: 1920;">
@@ -37,24 +40,18 @@
     
     <!-- primitives placement START -->
     <a-entity id="MovingPictures" postion="0 10 0" animation="property: rotation;from : 0 0 0; to: 0 360 0; loop: true;easing: linear; dur: 100000">
-        <a-box position="0 10 -5" rotation="0 45 45" scale="2 2 2" src="#larry" animation="property: rotation;from : 0 0 0; to: 45 270 360; loop: true;easing: linear; dur: 100000">
-        </a-box>
+    <a-box position="0 10 -5" rotation="0 45 45" scale="2 2 2" src="#larry" animation="property: rotation;from : 0 0 0; to: 45 270 360; loop: true;easing: linear; dur: 100000"></a-box>
     </a-entity>
-
-<!-- primitives placement END -->
+    <!-- primitives placement END -->
    
-<!-- portals placement START -->
-
-<a-link id="Blender on OCI" href="https://github.com/oracle-devrel/terraform-oci-blender" title="Blender on OCI" geometry="primitive: circle; segments: 64" material="shader: portal; side: double; backgroundColor: #7fe7f0; strokeColor: #26526a" link="backgroundColor: #7fe7f0; borderColor: #26526a" position="-30 2 0" rotation="0 -270 0"></a-link>
-
-<a-link id="Blender Video" href="https://www.youtube.com/watch?v=amqxaw2Ujn4" title="Blender Video" geometry="primitive: circle; segments: 64" material="shader: portal; side: double; backgroundColor: #7fe7f0; strokeColor: #26526a" link="backgroundColor: #7fe7f0; borderColor: #26526a" position="-30 2 20" rotation="0 -270 0"></a-link>
-
-<a-link id="Slack" href="https://bit.ly/devrel-xrlabs-channel" title="Slack" geometry="primitive: circle; segments: 64" material="shader: portal; side: double; backgroundColor: #7fe7f0; strokeColor: #26526a" link="backgroundColor: #7fe7f0; borderColor: #26526a" position="-30 2 -20" rotation="0 -270 0"></a-link>
-
-<!-- portals placement END -->
+    <!-- portals placement START -->
+    <a-link id="Blender on OCI" href="https://github.com/oracle-devrel/terraform-oci-blender" title="Blender on OCI" geometry="primitive: circle; segments: 64" material="shader: portal; side: double; backgroundColor: #7fe7f0; strokeColor: #26526a" link="backgroundColor: #7fe7f0; borderColor: #26526a" position="-30 2 0" rotation="0 -270 0"></a-link>
+    <a-link id="Blender Video" href="https://www.youtube.com/watch?v=amqxaw2Ujn4" title="Blender Video" geometry="primitive: circle; segments: 64" material="shader: portal; side: double; backgroundColor: #7fe7f0; strokeColor: #26526a" link="backgroundColor: #7fe7f0; borderColor: #26526a" position="-30 2 20" rotation="0 -270 0"></a-link>
+    <a-link id="Slack" href="https://bit.ly/devrel-xrlabs-channel" title="Slack" geometry="primitive: circle; segments: 64" material="shader: portal; side: double; backgroundColor: #7fe7f0; strokeColor: #26526a" link="backgroundColor: #7fe7f0; borderColor: #26526a" position="-30 2 -20" rotation="0 -270 0"></a-link>
+    <!-- portals placement END -->
 
 
-<!-- navMes placement START-->
+    <!-- navMes placement START-->
       <a-entity gltf-model="#CircleNavMesh" position="0 -0.01 0" scale="60 1 60" visible="false" nav-mesh></a-entity>
     <!-- navMes placement END-->
 
@@ -72,8 +69,6 @@
     </a-scene>
     <!-- 3D scene END -->
 
-
-<script src="./js/music.js"></script>
+    <script src="./js/music.js"></script>
 </body>
-
 </html>
