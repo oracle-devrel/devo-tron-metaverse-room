@@ -21,6 +21,7 @@
     <a-assets>
     <img id="larry" src="./assets/2DAssets/larry.png">
     <item id="TronFloor" src="./assets/3DModels/floorMesh.gltf">
+    <item id="TronFloor2" src="./assets/3DModels/floorMesh.gltf">
     <item id="logo" src="./assets/3DModels/oLogo.gltf">
     <item id="larryFrame" src="./assets/3DModels/larry.gltf">
     <audio id="bgSoundtrack" src="./assets/Audio/tronDay.m4v" preload="auto"></audio>
@@ -29,7 +30,7 @@
 
     <!-- 3D asset scene placement START -->
     <a-entity id="env">
-    <a-entity id="3dFloor" gltf-model="#TronFloor" rotation="0 0 0" position="0 0.1 0" scale="0.1 0.1 0.1"></a-entity>
+    <a-entity id="3dFloor" gltf-model="#TronFloor" rotation="0 0 0" position="0 0.01 0" scale="0.1 0.1 0.1"></a-entity>
     <a-entity id="ologo" gltf-model="#logo" rotation="90 0 0" position="0 10 0" scale="1 1 1" animation="property: rotation;from : 90 90 0; to: 90 450 0; loop: true;easing: linear; dur: 100000"></a-entity>
     <a-entity id="larryFrame" gltf-model="#larryFrame" rotation="-90 90 0" position="28 2 0" scale="1 1 1" animation="property: position;from : 30 2 -30; to: 30 2 30; loop: true;easing: linear; dur: 100000"></a-entity>
     </a-entity>
@@ -74,7 +75,6 @@
 
 
 <script src="./js/music.js"></script>
-<script src="./js/howler.js"></script>
 </body>
 
 </html>

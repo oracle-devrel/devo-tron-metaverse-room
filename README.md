@@ -3,21 +3,23 @@
 [![License: UPL](https://img.shields.io/badge/license-UPL-green)](https://img.shields.io/badge/license-UPL-green) [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=oracle-devrel_devo-tron-metaverse-room)](https://sonarcloud.io/dashboard?id=oracle-devrel_devo-tron-metaverse-room)
 
 ## Introduction
-40 years ago one of the most iconic movie called Tron was released. 
-To celebrate that I created a repository to teach you how you can run your own metaverse rooms and host them on Oracle Cloud Infrastructure.
-
+40 years ago, Tron, an iconic celebration of storytelling and VR, was released in theaters.
+To celebrate, I've created a repository to teach you how you can run your own metaverse rooms and host them on Oracle Cloud Infrastructure.<br>
+![This is an image](img/MetaverseRoom.png)
 ## SWAG ALERT 
 [Join our Slack Community](https://oracledevrel.slack.com/shared_invite/zt-1529xwkyv-YXfNmLHdB3z8w642ODXGzw#/shared-invite/email)<br>
 Post your designs in our slack channel for a chance to win in our swag raffle!
 
 ## Getting Started
-Check out this open source frame work called aframe.io. It is very neat and gives you options to do pretty advanced stuff  - especially if you are good with Blender and 3D.<br>
-Here is my example  demo of how you can modify itAll you need is a web-server but don't worry we will show you how to set one up on Oracle Cloud Infrastructure… did I mention it is free?
+Before we get started, check out [aframe.io](https://aframe.io/), an open source framework. It's super powerful and its ability to give you access to just about every parameter you can think of means you can pull off some pretty advanced stuff  - especially if you're comfortable using apps like [Blender](https://www.blender.org).<br>
+All you need is a web-server! And don't worry - we'll show you how to set one up on OCI. Oh, and did I mention it is free?
 Note that you can run multiple rooms on one compute instance!
 
 ### Create your free tier instance
-You can create your free tier account [here](https://www.oracle.com/uk/cloud/free/)  -  there is also a great tutorial done by [Chris Bensen](https://medium.com/oracledevs/create-an-oracle-always-free-cloud-account-bc6aa82c1397) on how to get one.<br>
-You can use A1 or E2.1 shape - this tutorial will focus on Linux OS but you can use other distributions (just bear in mind that CLI commands will be different)
+
+To host our metaverse room, we're going to use OCI's [Free Tier](https://www.oracle.com/uk/cloud/free/) account. If you need a hand setting that up, my colleague [wrote a tutorial](https://medium.com/oracledevs/create-an-oracle-always-free-cloud-account-bc6aa82c1397) that will get you up and running.
+You can use A1 or E2.1 shape - this tutorial will focus on Oracle Linux OS but you can use other distributions (just remember that CLI commands will be different).
+
 
 ### Connect to your instance
 Using remote connection of your choice connect to your OCI instance. Here is a link on how to get [started with OCI](https://docs.oracle.com/en-us/iaas/Content/GSG/Reference/overviewworkflow.htm)
