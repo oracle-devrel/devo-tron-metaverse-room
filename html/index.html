@@ -4,20 +4,26 @@
     <title>Metaverse Room</title>
     <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1a5f2348ffe8647e65e0c14788f5ae2bf27ed0cc/dist/aframe-master.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <link href="./css/style.css" rel="stylesheet">
+
+
 <body>
+    <div id="loadingScreen"><button class="button">Enter</button></div>
+
     <!-- 3D scene START -->
     <a-scene fog="type: linear; color: #AAA" background="color: #181616" cursor="rayOrigin: mouse" renderer="antialias: true; colorManagement: true; sortObjects: true; physicallyCorrectLights: true; maxCanvasWidth: 1920; maxCanvasHeight: 1920;">
 
     <!-- navMesh asset loader START -->
-    <a-asset-item id="CircleNavMesh" src="navmesh/navmeshcircle.gltf"></a-asset-item>
+    <a-asset-item id="CircleNavMesh" src="./navmesh/navmeshcircle.gltf"></a-asset-item>
     <!-- navMesh asset loader END -->
 
     <!-- asset loader START -->
     <a-assets>
-    <img id="larry" src="assets/2DAssets/larry.png">
-    <item id="TronFloor" src="assets/3DModels/floorMesh.gltf">
-    <item id="logo" src="assets/3DModels/oLogo.gltf">
-    <item id="larryFrame" src="assets/3DModels/larry.gltf">
+    <img id="larry" src="./assets/2DAssets/larry.png">
+    <item id="TronFloor" src="./assets/3DModels/floorMesh.gltf">
+    <item id="logo" src="./assets/3DModels/oLogo.gltf">
+    <item id="larryFrame" src="./assets/3DModels/larry.gltf">
+    <audio id="bgSoundtrack" src="./assets/Audio/tronDay.m4v" preload="auto"></audio>
     </a-assets>
     <!-- asset loader END -->
 
@@ -66,6 +72,9 @@
     </a-scene>
     <!-- 3D scene END -->
 
+
+<script src="./js/music.js"></script>
+<script src="./js/howler.js"></script>
 </body>
 
 </html>
