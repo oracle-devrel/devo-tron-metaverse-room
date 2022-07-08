@@ -5,10 +5,8 @@
 ## Introduction
 40 years ago, Tron, an iconic celebration of storytelling and VR, was released in theaters.
 To celebrate, I've created a repository to teach you how you can run your own metaverse rooms and host them on Oracle Cloud Infrastructure.<br>
-![This is an image](img/MetaverseRoom.png)
-## SWAG ALERT 
-[Join our Slack Community](https://oracledevrel.slack.com/shared_invite/zt-1529xwkyv-YXfNmLHdB3z8w642ODXGzw#/shared-invite/email)<br>
-Post your designs in our slack channel for a chance to win in our swag raffle!
+![This is an image](img/MetaverseRoom.png)<br>
+[Check it out here](https://3dpr.opcvr.tech/rooms/MetaverseRoom/index.html)<br>
 
 ## Getting Started
 Before we get started, check out [aframe.io](https://aframe.io/), an open source framework. It's super powerful and its ability to give you access to just about every parameter you can think of means you can pull off some pretty advanced stuff  - especially if you're comfortable using apps like [Blender](https://www.blender.org).<br>
@@ -17,8 +15,8 @@ Note that you can run multiple rooms on one compute instance!
 
 ### Create your free tier instance
 
-To host our metaverse room, we're going to use OCI's [Free Tier](https://www.oracle.com/uk/cloud/free/) account. If you need a hand setting that up, my colleague [wrote a tutorial](https://medium.com/oracledevs/create-an-oracle-always-free-cloud-account-bc6aa82c1397) that will get you up and running.
-You can use A1 or E2.1 shape - this tutorial will focus on Oracle Linux OS but you can use other distributions (just remember that CLI commands will be different).
+To host our metaverse room, we're going to use OCI's [Free Tier](https://signup.cloud.oracle.com/?sourceType=:em:lw:rce:cpo:::RC_WWMK220630P00065:FY23Q1_DevRel_Tron_Day_0709) account. If you need a hand setting that up, my colleague [wrote a tutorial](https://medium.com/oracledevs/create-an-oracle-always-free-cloud-account-bc6aa82c1397) that will get you up and running.
+You can use A1 or E2.1 shape - this tutorial will focus on Oracle Linux OS but you can use other distributions (just remember that CLI commands might be different).
 
 
 ### Connect to your instance
@@ -107,8 +105,10 @@ sudo systemctl restart nginx
 
 ### Verifying that everything works
 
-In order to ensure that the example.com server bloc works as intended. Let’s add a dummy file to our `/var/www/example.com/folder`. 
-`echo "Content for example.com" > /var/www/example.com/index.html`
+In order to ensure that the example.com server bloc works as intended. Let’s add a dummy file to our `/var/www/example.com/folder`. <br>
+```
+echo "Content for example.com" > /var/www/example.com/index.html
+```
 
 Use a browser and connect to `http://example.com`. The web server shows the example content from the `/var/www/example.com/index.html` file.
 
@@ -181,8 +181,13 @@ At Oracle we embrace open source technologies! Our aframe.io code is pretty basi
 Another good place to look at is Blender - it's free and very powerful. Perfect if you looking to start your 3D journey. IMHO Blender is absolutely amazing piece of kit and with new 3.2 release, there is a ton of new features make sure to check them out https://www.blender.org/download/releases/3-2/<br>
 Another place to check out is this blog done by Mozilla Hubs on how to export glTF files from Blender and import them into webGL experiences. glTF is being considered as an jpeg of 3D and it is royalty free - you can learn more about it here https://www.khronos.org/gltf/
 
+[Join our Slack Community for more info](https://bit.ly/devrel-xrlabs-channel)<br>
+
 ## Contributing
 This project is open source.  Please submit your contributions by forking this repository and submitting a pull request!  Oracle appreciates any contributions that are made by the open source community.
+
+## Special thanks
+@GreatGhostsss for a great soundtrack!
 
 ## License
 Copyright (c) 2022 Oracle and/or its affiliates.
